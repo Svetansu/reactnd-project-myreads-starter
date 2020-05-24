@@ -2,6 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import HomePage from './HomePage'
 import SearchPage from './SearchPage'
+import Provider, { MyContext } from './Provider/'
 
 //import * as BooksAPI from './BooksAPI'
 import './App.css'
@@ -20,10 +21,24 @@ class BooksApp extends React.Component {
   render() {
     return (
       <div className="app">
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/search" component={SearchPage} />
-        </Switch>
+        <Provider>
+            <Switch>
+              <Route exact path="/" 
+                render={() => (
+                    <MyContext.Consumer>
+                      {context => <HomePage {...context} />}
+                    </MyContext.Consumer>
+                  )}
+              />
+              <Route exact path="/search" 
+                render={() => (
+                    <MyContext.Consumer>
+                      {context => <SearchPage {...context} />}
+                    </MyContext.Consumer>
+                  )}
+              />
+            </Switch>
+        </Provider>
       </div>
     )
   }

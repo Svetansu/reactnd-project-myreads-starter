@@ -8,7 +8,7 @@ class BookRow extends Component {
                   <h2 className="bookshelf-title">{this.props.header}</h2>
                   <div className="bookshelf-books">
                     <ol className="books-grid">
-                    	<Book />
+                    	{this.props.books && this.props.books.map(book => <Book key={book.id} {...book} move={this.props.move} />)}
                     </ol>
                   </div>
                 </div>

@@ -8,7 +8,7 @@ class HomePage extends Component {
 	async componentDidMount(){
 		try {
 			const books = await getAll();
-			console.log(books);
+			this.props.addBooks(books);
 		} catch( error ) {
 			console.log(error);
 		}
@@ -20,9 +20,9 @@ class HomePage extends Component {
 		              <h1>MyReads</h1>
 		            </div>
 		            <div className="list-books-content">
-		                <BookRow header='Currrently Reading...' />
-		                <BookRow header='Want To Read...' />
-		                <BookRow header='Read...' />
+		                <BookRow header='Currrently Reading...' books={this.props.cr} move={this.props.move} />
+		                <BookRow header='Want To Read...' books={this.props.wtr} move={this.props.move} />
+		                <BookRow header='Read...' books={this.props.read} move={this.props.move} />
 		            </div>
 	             <SearchBook />
 	          	</div>
