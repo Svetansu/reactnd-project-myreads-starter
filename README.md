@@ -13,6 +13,7 @@ I have added some information below to make undersatnding my work easier:
     -- I've opted to use React Context in my application. This allows for the easy passing down of global properties of the book shelves to be passed down easily to the HomePage and SearchPage components. This was done by the index.js component in the "Provider" directory.
 
 Some important features of the project include:
+    
     -- State management
     -- Use of APIs
     -- Search handling
