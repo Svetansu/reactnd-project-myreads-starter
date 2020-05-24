@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import BookRow from './BookRow'
-import SearchBook from './SearchBook'
+import { Link } from 'react-router-dom'
 import { getAll } from './BooksAPI'
 
 class HomePage extends Component {
@@ -24,7 +24,9 @@ class HomePage extends Component {
 		                <BookRow header='Want To Read...' books={this.props.wtr} move={this.props.move} />
 		                <BookRow header='Read...' books={this.props.read} move={this.props.move} />
 		            </div>
-	             <SearchBook />
+		            <div className="open-search-div">
+		              <Link className="open-search" to={"/search"}>Add a book</Link>
+		            </div>
 	          	</div>
 			)
 	}

@@ -17,7 +17,6 @@ class index extends Component {
 				this.setState({ books, cr, wtr, read });
 			},
 			move: (book, nshelf, rows) => {
-				console.log(nshelf);
 				const bArr = this.state.books.map(a => {
 					const i = rows[nshelf].find(bookID => bookID === a.id);
 					if (i) {
