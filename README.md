@@ -2,6 +2,12 @@
 
 This project is my second submission for the MyReads book-keeping react application.
 
+To get started developing right away:
+
+* install all project dependencies with `npm install`/`yarn install`
+* start the development server with `npm start`/`yarn start`
+* run http://localhost:3000/ to view the application
+
 ## About
 
 
@@ -24,10 +30,6 @@ Some important features of the project include:
     -- Search handling
     -- Routing
 
-To get started developing right away:
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
-* run http://localhost:3000/ to open the app
 
 
