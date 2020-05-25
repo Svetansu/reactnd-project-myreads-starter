@@ -154,6 +154,9 @@ button:active {
 
 .book-authors {
   color: #999;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .book-top {
@@ -196,4 +199,12 @@ button:active {
   padding: 20px 10px 0;
   text-align: center;
   font-size: 0.8em;
+}
+
+.auth {
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
 }

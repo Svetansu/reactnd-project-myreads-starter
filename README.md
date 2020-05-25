@@ -1,6 +1,11 @@
-# MyReads Project v1.0
+# MyReads Project v1.1
 
-This project is my first submission for the MyReads book-keeping react application.
+This project is my second submission for the MyReads book-keeping react application.
+
+## About
+
+
+
 I have added some information below to make understanding my work easier:
 
     -- The starter code for this project gave us one App.js file with the functionality of a Home Page and a Search Page.
@@ -19,7 +24,10 @@ Some important features of the project include:
     -- Search handling
     -- Routing
 
+To get started developing right away:
 
-
+* install all project dependencies with `npm install`
+* start the development server with `npm start`
+* run http://localhost:3000/ to open the app
 
 

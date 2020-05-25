@@ -17,17 +17,24 @@ class index extends Component {
 				this.setState({ books, cr, wtr, read });
 			},
 			move: (book, nshelf, rows) => {
-				const bArr = this.state.books.map(a => {
+				if (nshelf !== "none") {
+					const bArr = this.state.books.map(a => {
 					const i = rows[nshelf].find(bookID => bookID === a.id);
-					if (i) {
-						a.shelf = nshelf;
-					}
-					return a;
-				});
-				this.state.addBooks(bArr);
+						if (i) {
+							a.shelf = nshelf;
+						}
+						return a;
+					});
+					this.state.addBooks(bArr);
+				} else {
+					const filtered = this.state.books.filter(b => b.id !== book.id )
+					this.state.addBooks(filtered);
+				}
+				
 			}
 		}
 	}
+
 
 	render() {
 		return (

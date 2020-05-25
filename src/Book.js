@@ -6,16 +6,21 @@ class Book extends Component {
 	handleChange = async e => {
 		try {
 			const shelf = e.target.value;
+			console.log(e.target.value);
 			const book = this.props;
 			const res = await update(book, shelf);
+			console.log(res);
 			this.props.move(book, shelf, res);
 		} catch (error) {
 			console.log(error);
 		}
 
-		//console.log(e.target.value)
+		
 	};
 	render() {
+		const author = this.props.authors ? this.props.authors : ["Unknown authors"];
+		const authorList = <div>{author.map(a => <p className="book-authors" key={author.indexOf(a)}>{a}</p>)}</div>;
+
 		return (
                 <li>
                         <div className="book">
@@ -37,7 +42,7 @@ class Book extends Component {
                             </div>
                           </div>
                           <div className="book-title">{this.props.title}</div>
-                          <div className="book-authors">{this.props.authors ? this.props.authors[0] : "Unknown authors"}</div>
+                          <div>{authorList}</div>
                         </div>
                 </li>
 			)
