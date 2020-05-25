@@ -1,6 +1,6 @@
 # MyReads Project v1.1
 
-This project is my second submission for the MyReads book-keeping react application.
+This project is my second submission for the MyReads book-keeping react application, a project for the Udacity React Developer Nanodegree.
 
 To get started developing right away:
 
@@ -10,12 +10,11 @@ To get started developing right away:
 
 ## About
 
-
+MyReads is a book-keeping app that allows users to add, select and categorize books which they have read, are currently reading, or want to read. It allows users to add new books to these categories by searching for them by name, and remove any books from the shelves they're in. It's developed using the React Framework. The starter code for this project provides one App.js file with the functionality of a Home Page and a Search Page, along with an API server and a client library for receiving, updating and storing book information as users interact with the application.
 
 I have added some information below to make understanding my work easier:
 
-    -- The starter code for this project gave us one App.js file with the functionality of a Home Page and a Search Page.
-       I chose to distribute App.js into separate components, which are:
+    --  I chose to distribute App.js into separate components, which are:
             - Book.js: Component to render each book in any shelves or search results.
             - BookRow.js: The shelves or "rows" of books are stored as a component named BookRow. 
             - HomePage.js: The main landing page, where the 3 main shelves and a button to add more books, are present.
